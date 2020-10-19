@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Les Gossip</h1>
+    <% id = 0 %>
+    <% gossips.each do |gossip| %>
+      <p>
+        <%= gossip.author %><br/>
+        <%= gossip.content %><br/>
+        <a href = "/gossips/<%=id%>/">Lien</a>
+      </p>
+      <% id +=1 %>
+    <% end %>
+    <p>Tu peux  créer un potan en cliquant sur ce <a href="/gossips/new/">lien</a>.<p>
+  </body>
+</html>
